@@ -1,0 +1,23 @@
+name: TP04 dinosaurus game
+
+jobs: 
+  build:
+    runs-on: alpine-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: set up node.js
+        uses: action/setup-node@v4
+
+      - name: npm install
+        uses: npm i
+
+      - name: upload pages
+        uses: actions/upload-pages-artifact@v2
+
+      - name: deploy pages
+        uses: actions/setup-pages@v3
+        
+
